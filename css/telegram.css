@@ -3564,7 +3564,7 @@ a.tgme_head_dl_button:active,
   -webkit-line-clamp: unset;
 }
 .tgme_page_additional {
-  display: none;
+  /*display: none;*/
   font-size: 14px;
   line-height: 23px;
   margin-top: 32px;
