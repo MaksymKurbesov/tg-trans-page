@@ -30,6 +30,11 @@
 	'https://connect.facebook.net/en_US/fbevents.js');
 	fbq('init', '443727860207742');
 	fbq('track', 'PageView');
+
+	function trackLead() {
+		try { if (window.fbq) fbq('track', 'Lead'); } catch (e) {}
+		try { if (window.ttq) ttq.track('ClickButton'); } catch (e) {}
+	}
 	</script>
 	<noscript><img height="1" width="1" style="display:none"
 	src="https://www.facebook.com/tr?id=443727860207742&ev=PageView&noscript=1"
@@ -99,10 +104,11 @@
         </div>
         <div class="tgme_page_action">
           <a class="tgme_action_button_new shine bot_link" href="https://t.me/+tb19bNotBfwwZTFh"
+            onclick="trackLead()"
             style="display: inline-block; width: 300px; margin-bottom: 10px;">VIEW IN TELEGRAM</a>
         </div>
         <div class="tgme_page_action tgme_page_web_action">
-          <a class="tgme_action_button_new tgme_action_web_button" href="https://t.me/+tb19bNotBfwwZTFh"><span class="tgme_action_button_label">Open in Web</span></a>
+          <a class="tgme_action_button_new tgme_action_web_button" href="https://t.me/+tb19bNotBfwwZTFh" onclick="trackLead()"><span class="tgme_action_button_label">Open in Web</span></a>
         </div>
 
 
